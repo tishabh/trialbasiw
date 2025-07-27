@@ -1,0 +1,28 @@
+# RTPQueue1v1 Configuration
+
+# Queue announcement interval in seconds
+announcement-interval: 10
+
+# Maximum teleportation attempts
+max-teleport-attempts: 5
+
+# Combat effects duration
+effects:
+  blindness-duration: 40  # 2 seconds (20 ticks = 1 second)
+  freeze-duration: 100    # 5 seconds
+
+# Teleportation settings
+teleportation:
+  spawn-distance: 5
+  safe-height-buffer: 3
+
+# Messages
+messages:
+  gui-title: "&6&lRTP Queue &8- &7Select World"
+  queue-join: "&8[&6&lRTP Queue&8] &7Player &a{player} &7has joined the &b{world} &7queue. &8(&7Searching for opponent...&8)"
+  queue-leave: "&8[&6&lRTP Queue&8] &7You have successfully left the queue."
+  queue-join-broadcast: "&8[&6&lRTP Queue&8] &7Player &a{player} &7is now searching for a match in &b{world}&7."
+  match-found: "&3&lMATCH &8» &7YOU ARE QUEUED WITH &a&l{opponent}"
+  combat-log: "&c{player} left the match and was killed for combat logging."
+  countdown: "&c{seconds}"
+  confirm-title: "&6&lConfirm Queue &8- &7{world}"

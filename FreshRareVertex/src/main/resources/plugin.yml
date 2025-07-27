@@ -1,0 +1,21 @@
+
+name: RTPQueue1v1
+version: 1.0.0
+main: com.rtpqueue.RTPQueue1v1
+api-version: 1.20
+author: RTPQueue
+description: A 1v1 matchmaking system with GUI world selection
+
+commands:
+  rtpqueue:
+    description: Opens the RTP Queue GUI
+    usage: /rtpqueue
+    aliases: [rtp, queue]
+
+permissions:
+  rtpqueue.use:
+    description: Allows use of the RTP Queue system
+    default: true
+  rtpqueue.admin:
+    description: Admin permissions for RTP Queue
+    default: op

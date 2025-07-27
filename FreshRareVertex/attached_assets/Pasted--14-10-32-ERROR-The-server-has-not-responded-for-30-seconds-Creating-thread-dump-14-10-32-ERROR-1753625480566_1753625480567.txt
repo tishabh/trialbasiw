@@ -1,0 +1,39 @@
+[14:10:32 ERROR]: The server has not responded for 30 seconds! Creating thread dump
+[14:10:32 ERROR]: ------------------------------
+[14:10:32 ERROR]: Server thread dump (Look for plugins here before reporting to Paper!):
+[14:10:32 ERROR]: [ChunkTaskScheduler] Chunk wait task info below: 
+[14:10:32 ERROR]: [ChunkTaskScheduler] Chunk wait: [( 470,-121) in 'world']
+[14:10:32 ERROR]: [ChunkTaskScheduler] Chunk holder: NewChunkHolder{world=world, chunkX=470, chunkZ=-121, entityChunkFromDisk=false, lastChunkCompletion={chunk_class=net.minecraft.world.level.chunk.ProtoChunk,status=minecraft:carvers}, currentGenStatus=minecraft:carvers, requestedGenStatus=minecraft:full, generationTask=null, generationTaskStatus=null, priority=BLOCKING, priorityLocked=false, neighbourRequestedPriority=null, effective_priority=BLOCKING, oldTicketLevel=33, currentTicketLevel=33, totalNeighboursUsingThisChunk=0, fullNeighbourChunksLoadedBitset=0, currentChunkStatus=INACCESSIBLE, pendingChunkStatus=INACCESSIBLE, is_unload_safe=ticket_level, killed=false}
+[14:10:32 ERROR]: ------------------------------
+[14:10:32 ERROR]: Current Thread: Server thread
+[14:10:32 ERROR]:       PID: 37 | Suspended: false | Native: false | State: TIMED_WAITING
+[14:10:32 ERROR]:       Stack:
+[14:10:32 ERROR]:               java.base@21.0.7/jdk.internal.misc.Unsafe.park(Native Method)
+[14:10:32 ERROR]:               java.base@21.0.7/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:269)
+[14:10:32 ERROR]:               net.minecraft.util.thread.BlockableEventLoop.waitForTasks(BlockableEventLoop.java:146)
+[14:10:32 ERROR]:               net.minecraft.util.thread.BlockableEventLoop.managedBlock(BlockableEventLoop.java:136)
+[14:10:32 ERROR]:               net.minecraft.server.level.ServerChunkCache$MainThreadExecutor.managedBlock(ServerChunkCache.java:707)
+[14:10:32 ERROR]:               net.minecraft.server.level.ServerChunkCache.syncLoad(ServerChunkCache.java:101)
+[14:10:32 ERROR]:               net.minecraft.server.level.ServerChunkCache.getChunkFallback(ServerChunkCache.java:126)
+[14:10:32 ERROR]:               net.minecraft.server.level.ServerChunkCache.getChunk(ServerChunkCache.java:235)
+[14:10:32 ERROR]:               net.minecraft.world.level.Level.getChunk(Level.java:939)
+[14:10:32 ERROR]:               org.bukkit.craftbukkit.CraftWorld.getHighestBlockYAt(CraftWorld.java:1035)
+[14:10:32 ERROR]:               org.bukkit.craftbukkit.CraftRegionAccessor.getHighestBlockYAt(CraftRegionAccessor.java:168)
+[14:10:32 ERROR]:               org.bukkit.craftbukkit.CraftWorld.getHighestBlockAt(CraftWorld.java:1023)
+[14:10:32 ERROR]:               RTPQueue1v1 (1).jar//com.rtpqueue.utils.TeleportUtils.findSafeLocation(TeleportUtils.java:52)
+[14:10:32 ERROR]:               RTPQueue1v1 (1).jar//com.rtpqueue.utils.TeleportUtils.findSafeLocations(TeleportUtils.java:26)
+[14:10:32 ERROR]:               RTPQueue1v1 (1).jar//com.rtpqueue.managers.MatchManager.teleportPlayers(MatchManager.java:76)
+[14:10:32 ERROR]:               RTPQueue1v1 (1).jar//com.rtpqueue.managers.MatchManager$1.run(MatchManager.java:66)
+[14:10:32 ERROR]:               org.bukkit.craftbukkit.scheduler.CraftTask.run(CraftTask.java:86)
+[14:10:32 ERROR]:               org.bukkit.craftbukkit.scheduler.CraftScheduler.mainThreadHeartbeat(CraftScheduler.java:475)
+[14:10:32 ERROR]:               net.minecraft.server.MinecraftServer.tickChildren(MinecraftServer.java:1724)
+[14:10:32 ERROR]:               net.minecraft.server.dedicated.DedicatedServer.tickChildren(DedicatedServer.java:473)
+[14:10:32 ERROR]:               net.minecraft.server.MinecraftServer.tickServer(MinecraftServer.java:1596)
+[14:10:32 ERROR]:               net.minecraft.server.MinecraftServer.runServer(MinecraftServer.java:1302)
+[14:10:32 ERROR]:               net.minecraft.server.MinecraftServer.lambda$spin$0(MinecraftServer.java:329)
+[14:10:32 ERROR]:               net.minecraft.server.MinecraftServer$$Lambda/0x0000709cfcc72860.run(Unknown Source)
+[14:10:32 ERROR]:               java.base@21.0.7/java.lang.Thread.runWith(Thread.java:1596)
+[14:10:32 ERROR]:               java.base@21.0.7/java.lang.Thread.run(Thread.java:1583)
+[14:10:32 ERROR]: ------------------------------
+[14:10:32 ERROR]: --- DO NOT REPORT THIS TO PAPER - THIS IS NOT A BUG OR A CRASH ---
+[14:10:32 ERROR]: ------------------------------
